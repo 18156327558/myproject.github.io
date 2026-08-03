@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 由 https://packager.turbowarp.org/ 创建 -->
+<!-- Created with https://packager.turbowarp.org/ -->
 <html>
 <head>
   <meta charset="utf-8">
@@ -228,7 +228,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 100;
       scaffolding.height = 360;
-      scaffolding.resizeMode = "preserve-ratio";
+      scaffolding.resizeMode = "dynamic-resize";
       scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
@@ -341,8 +341,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
             }
             const path = assetId + '.' + dataFormat;
             const file = findFileInZip(path);
-            如果 (!file) {
-              console.error('资源不在压缩包中: ' + path);
+            if (!file) {
+              console.error('Asset is not in zip: ' + path);
               return Promise.resolve(null);
             }
             return file
