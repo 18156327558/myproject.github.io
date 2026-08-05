@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的作品</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style id="ext-inline-css-import-0">
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:       #0f0f0f;
+      --card-bg:  #1a1a1a;
+      --border:   #2a2a2a;
+      --accent:   #6c63ff;
+      --text:     #e0e0e0;
+      --muted:    #888;
+      --radius:   12px;
+    }
+
+    body {
+      font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 24px;
+    }
+
+    /* ===== 标题 ===== */
+    .page-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-title .highlight {
+      background: linear-gradient(135deg, var(--accent), #ff6584);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ===== 作品区域 ===== */
+    .works-grid {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .work-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .work-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(108,99,255,0.15);
+    }
+
+    .work-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: #141414;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .work-thumb::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.5;
+    }
+
+    .work-thumb-icon { font-size: 3rem; opacity: 0.2; position: relative; z-index: 1; }
+
+    .work-body { padding: 22px; }
+
+    .work-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    /* ===== 空占位卡片 ===== */
+    .work-card-empty {
+      border: 2px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .work-card-empty:hover { transform: none; box-shadow: none; border-color: var(--accent); }
+
+    .work-card-empty .plus-icon {
+      width: 44px; height: 44px;
+      border: 2px dashed var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 768px) {
+      body { padding: 40px 16px; }
+      .works-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<style id="htmlpage-inline-styles">* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#iz99i {
+  font-size: 50px;
+  color: #dbcaca;
+}
+
+#i00g3 {
+  font-size: 50px;
+  color: #ece7e7;
+}
+
+@media (max-width: 100%) {
+  .c36361 {
+    color: black;
+    width: 521px;
+    height: 315px;
+  }
+
+  .c37197 {
+    padding: 10px;
+    font-size: 50px;
+    letter-spacing: 0px;
+    font-weight: 900;
+    color: #ebdede;
+    text-align: center;
+  }
+
+  .c37971 {
+    font-size: 50px;
+  }
+
+  .c38751 {
+    font-size: 50px;
+  }
+
+  .btn.btn-primary.btn-sm.px-3 {
+    background-image: none;
+    background-color: rgb(0, 123, 255);
+  }
+
+  .c46378 {
+    font-size: 50px;
+    color: #e4e0e0;
+    text-align: center;
+  }
+
+  .c53766 {
+    font-size: 50px;
+    color: #e4dfdf;
+  }
+
+  .c72710 {
+    color: black;
+  }
+
+  .c74421 {
+    padding: 10px;
+    font-size: 50px;
+  }
+
+  .c77098 {
+    font-size: 50px;
+  }
+
+  .c77621 {
+    font-size: 50px;
+    color: #ebd7d7;
+  }
+
+  .btn.btn-outline-primary.text-nowrap.px-2 {
+    background-image: none;
+    background-color: rgb(0, 123, 255);
+  }
+
+  .d-inline-flex.flex-column.gap-2.rounded-3.border.bg-white.p-2.shadow-sm {
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+  }
+}
+</style>
+</head>
+<body>
+<h1 class="page-title">我的<span class="highlight">作品</span></h1>
+  <div class="works-grid"><!-- ⬇️ 在这里添加你的作品卡片 ⬇️ --><!-- 参考模板（复制下面的结构，替换内容即可）:
+    <div class="work-card">
+      <div class="work-thumb">
+        <div class="work-thumb-icon">🖼️</div>
+      </div>
+      <div class="work-body">
+        <h3 class="work-title">作品标题</h3>
+      </div>
+    </div>
+    --><!-- 空白占位卡片 --></div>
+  <div class="c37197"><span class="c38751"><span><b class="c46378"><a href="https://l428ib5nb8ri.space.minimaxi.com/" __p="undefined" class="c53766"><span style="font-size:50px;color:#dbcaca;">张鑫银行</span></a>（←点此打开）</b></span></span><span class="c37971"></span>
+  </div><img src="https://cms-api.htmlpage.cn/uploads/large_445_1785722491827_zhzz48h4q1_39b2c2f02c.png" class="c36361">
+  <div class="c74421"><span class="c77098"><a href="https://18156327558.github.io/flyingbird/" __p="undefined" class="c77621"><span style="font-size:50px;color:#ece7e7;">飞翔小鸟</span></a>（←点此打开）</span><span></span></div><img src="https://cms-api.htmlpage.cn/uploads/445_1785931305680_sjahv0ffphh_4b0482a4c8.png" class="c72710">
+  <div class="d-inline-flex flex-column gap-2 rounded-3 border bg-white p-2 shadow-sm">
+    <div role="group" aria-label="按钮组" class="btn-group btn-group-sm"><button type="button" class="btn btn-outline-primary text-nowrap px-2"><a href="https://18156327558.github.io/">我的主页</a></button><button type="button" class="btn btn-outline-primary text-nowrap px-2"><a href="https://www.weibo.com/u/4066226394">我的微博</a></button>
+    </div>
+  </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
